@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.4.21",
+    "vue-clerk": "^0.4.2",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
