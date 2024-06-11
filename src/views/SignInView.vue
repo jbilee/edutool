@@ -3,5 +3,14 @@ import { SignIn } from "vue-clerk";
 </script>
 
 <template>
-  <SignIn />
+  <div class="container">
+    <SignIn />
+  </div>
 </template>
+
+<style scoped>
+.container {
+  position: relative;
+  top: -80px;
+}
+</style>
