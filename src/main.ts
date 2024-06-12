@@ -2,15 +2,24 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import { clerkPlugin } from "vue-clerk";
 import App from "./App.vue";
+import AssignmentsView from "./views/AssignmentsView.vue";
 import HomeView from "./views/HomeView.vue";
 import MemberHomeView from "./views/MemberHomeView.vue";
+import MemberLayout from "./components/MemberLayout.vue";
 import SignInView from "./views/SignInView.vue";
 import "./style.css";
 
 const routes = [
   { path: "/", name: "home", component: HomeView },
   { path: "/signin", name: "signin", component: SignInView },
-  { path: "/main", name: "main", component: MemberHomeView },
+  {
+    path: "/main",
+    component: MemberLayout,
+    children: [
+      { path: "", name: "mainhome", component: MemberHomeView },
+      { path: "assignments", name: "assignments", component: AssignmentsView },
+    ],
+  },
 ];
 
 const router = createRouter({

@@ -39,10 +39,6 @@ import EdupalAd from "../components/EdupalAd.vue";
 </template>
 
 <style scoped>
-h1 {
-  text-align: left;
-}
-
 .page-container {
   display: flex;
   flex-direction: column;

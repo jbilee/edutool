@@ -1,10 +1,16 @@
 <script setup lang="ts">
-import TeacherView from "./TeacherView.vue";
-
+import { RouterView } from "vue-router";
+import { SignedIn } from "vue-clerk";
+import Sidebar from "./Sidebar.vue";
 </script>
 
 <template>
-  <TeacherView />
+  <SignedIn>
+    <div class="container">
+      <Sidebar />
+      <RouterView />
+    </div>
+  </SignedIn>
 </template>
 
 <style scoped>

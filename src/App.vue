@@ -13,11 +13,11 @@ import NavBar from "./components/NavBar.vue";
 <style scoped>
 .main {
   position: relative;
-  top: 72px;
+  top: 73px;
+  height: calc(100vh - 73px);
   display: grid;
   place-content: center;
   /* background: blue; */
   /* width: 1200px; */
-  height: calc(100vh - 72px);
 }
 </style>
