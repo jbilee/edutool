@@ -60,13 +60,6 @@ import EdupalAd from "../components/EdupalAd.vue";
   }
 }
 
-.card-content {
-  padding: 1.5rem;
-  border-radius: 1rem;
-  background: white;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-}
-
 .card-title {
   font-size: 1.2rem;
   font-weight: 700;
