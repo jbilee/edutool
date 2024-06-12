@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import { clerkPlugin } from "vue-clerk";
+import { createPinia } from "pinia";
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { BiPersonCheckFill } from "oh-vue-icons/icons";
 import App from "./App.vue";
@@ -31,10 +32,13 @@ const router = createRouter({
   routes,
 });
 
+const pinia = createPinia();
+
 const app = createApp(App);
 app.use(router);
 app.use(clerkPlugin, {
   publishableKey: import.meta.env.VITE_CLERK_PUBLISHABLE_KEY,
-  });
+});
+app.use(pinia);
 app.component("v-icon", OhVueIcon);
 app.mount("#app");

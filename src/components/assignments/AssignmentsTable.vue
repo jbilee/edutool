@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type Assignment = { id: number, title: string, startDate: number, dueDate: number, curriculum: string, submissions: number, classSize: number }
+import type { Assignment } from "../../utils/AssignmentsStore.ts"
 const props = defineProps<{
   assignments: Assignment[]
 }>()
