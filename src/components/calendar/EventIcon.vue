@@ -19,5 +19,6 @@ const toggleView = (event: string) => isHovered.value = event === "hovering";
 <style scoped>
 .event-icon-container {
   position: relative;
+  cursor: pointer;
 }
 </style>

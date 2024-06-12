@@ -22,11 +22,10 @@
     linear-gradient(127deg, rgb(134, 47, 255), rgba(0, 0, 0, 0) 70.71%),
     linear-gradient(336deg, rgb(0, 182, 248), rgba(0, 0, 0, 0) 70.71%);
   color: rgb(255, 255, 255);
-  font-weight: 700;
   padding: 1.5rem;
-  text-align: left;
 
   .slogan {
+    font-weight: 700;
     font-size: 1.5rem;
   }
 }
