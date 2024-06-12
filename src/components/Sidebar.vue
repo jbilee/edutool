@@ -3,10 +3,21 @@
 
 <template>
   <div class="sidebar">
-    <li>내 커리큘럼</li>
-    <li>숙제/과제</li>
-    <li>퀴즈</li>
-    <li>일정관리</li>
+    <li>
+      <RouterLink to="/main">메인페이지</RouterLink>
+    </li>
+    <li>
+      <RouterLink to="/main/curriculum">내 커리큘럼</RouterLink>
+    </li>
+    <li>
+      <RouterLink to="/main/assignments">과제</RouterLink>
+    </li>
+    <li>
+      <RouterLink to="/main/quizzes">퀴즈</RouterLink>
+    </li>
+    <li>
+      <RouterLink to="/main/schedule">일정관리</RouterLink>
+    </li>
   </div>
 </template>
 

@@ -8,7 +8,9 @@ import Sidebar from "./Sidebar.vue";
   <SignedIn>
     <div class="container">
       <Sidebar />
-      <RouterView />
+      <div class="page-container">
+        <RouterView />
+      </div>
     </div>
   </SignedIn>
 </template>
@@ -24,5 +26,12 @@ import Sidebar from "./Sidebar.vue";
   @media (min-width: 768px) {
     flex-direction: row;
   }
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
 }
 </style>
