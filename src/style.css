@@ -72,6 +72,13 @@ button:focus-visible {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: left;
+  padding-bottom: 0.5rem;
+}
+
 .label {
   border-radius: 50px;
   user-select: none;

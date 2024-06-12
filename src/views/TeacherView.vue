@@ -59,11 +59,4 @@ import EdupalAd from "../components/EdupalAd.vue";
     grid-template-columns: auto 1fr;
   }
 }
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-align: left;
-  padding-bottom: 0.5rem;
-}
 </style>
