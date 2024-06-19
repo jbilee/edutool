@@ -17,11 +17,26 @@ export type Assignment = {
   details: string;
 };
 
+type State = DataProps & {
+  filter: null | string;
+};
+
 const localData = localStorage.getItem("edutool-data");
 const initialState: DataProps = localData
   ? JSON.parse(localData)
   : { assignments: sampleAssignments, curriculums: sampleCurriculums };
 
 export const useDataStore = defineStore("assignments", {
-  state: () => ({ ...initialState }),
+  state: (): State => ({ ...initialState, filter: null }),
+  getters: {
+    filteredAssignments: (state) => {
+      if (!state.filter) return state.assignments;
+      return state.assignments.filter((assignment) => assignment.curriculum === state.filter);
+    },
+  },
+  actions: {
+    setCurriculumFilter(filter: string | null) {
+      this.filter = filter;
+    },
+  },
 });
