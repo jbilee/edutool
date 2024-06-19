@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import EventIcon from './EventIcon.vue';
+import EventIcon from "./EventIcon.vue"
 
 </script>
 
@@ -33,7 +33,9 @@ import EventIcon from './EventIcon.vue';
     <tbody>
       <tr>
         <td></td>
-        <td><EventIcon event-type="quiz" /></td>
+        <td>
+          <EventIcon event-type="quiz" />
+        </td>
         <td></td>
         <td></td>
         <td></td>

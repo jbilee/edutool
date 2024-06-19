@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import HoverCard from "./HoverCard.vue";
+import { ref } from "vue"
+import HoverCard from "./HoverCard.vue"
 
 const props = defineProps<{
   eventType: String
-}>();
-const isHovered = ref(false);
-const toggleView = (event: string) => isHovered.value = event === "hovering";
+}>()
+const isHovered = ref(false)
+const toggleView = (event: string) => isHovered.value = event === "hovering"
 </script>
 
 <template>

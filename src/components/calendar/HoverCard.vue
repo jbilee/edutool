@@ -2,7 +2,7 @@
 const props = defineProps<{
   title: String,
   date: String
-}>();
+}>()
 </script>
 
 <template>

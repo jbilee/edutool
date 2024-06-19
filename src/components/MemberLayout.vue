@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
-import { SignedIn } from "vue-clerk";
-import Sidebar from "./Sidebar.vue";
+import { RouterView } from "vue-router"
+import { SignedIn } from "vue-clerk"
+import Sidebar from "./Sidebar.vue"
 </script>
 
 <template>
