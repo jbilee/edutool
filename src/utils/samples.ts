@@ -50,3 +50,5 @@ export const sampleAssignments = [
     details: "",
   },
 ];
+
+export const sampleCurriculums = ["식물 키우기", "수학: 미적분", "영어 - 해외여행", "영어 - 학교생활"];

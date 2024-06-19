@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia"
 import AssignmentsTable from "../components/assignments/AssignmentsTable.vue";
-import { useAssignmentsStore } from "../utils/AssignmentsStore.ts"
+import { useDataStore } from "../utils/DataStore.ts"
 
-const store = useAssignmentsStore()
-const { assignments } = storeToRefs(store)
+const store = useDataStore()
+const { assignments, curriculums } = storeToRefs(store)
 </script>
 
 <template>

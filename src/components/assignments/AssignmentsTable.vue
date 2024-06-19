@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Assignment } from "../../utils/AssignmentsStore.ts"
+import type { Assignment } from "../../utils/DataStore.ts"
 const props = defineProps<{
   assignments: Assignment[]
 }>()
