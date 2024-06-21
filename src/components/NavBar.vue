@@ -5,7 +5,7 @@ const onSignout = () => signOut()
 </script>
 
 <template>
-  <div class="container">
+  <div class="navbar-container">
     <div class="logo">
       <RouterLink to="/">Edutool</RouterLink>
     </div>
@@ -19,7 +19,7 @@ const onSignout = () => signOut()
 </template>
 
 <style scoped>
-.container {
+.navbar-container {
   position: fixed;
   top: 0;
   left: 0;

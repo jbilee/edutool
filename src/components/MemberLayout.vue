@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar.vue"
 
 <template>
   <SignedIn>
-    <div class="container">
+    <div class="member-container">
       <Sidebar />
       <div class="page-container">
         <RouterView />
@@ -16,12 +16,11 @@ import Sidebar from "./Sidebar.vue"
 </template>
 
 <style scoped>
-.container {
+.member-container {
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: inherit;
-  scrollbar-gutter: stable both-edges;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -33,5 +32,7 @@ import Sidebar from "./Sidebar.vue"
   flex-direction: column;
   width: 100%;
   padding: 2rem;
+  scrollbar-gutter: stable;
+  overflow: auto;
 }
 </style>

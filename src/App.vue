@@ -17,7 +17,5 @@ import NavBar from "./components/NavBar.vue";
   height: calc(100vh - 73px);
   display: grid;
   place-content: center;
-  /* background: blue; */
-  /* width: 1200px; */
 }
 </style>

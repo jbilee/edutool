@@ -9,7 +9,7 @@ const { curriculums, filteredAssignments } = storeToRefs(store)
 const onFilterChange = (e: Event) => {
   const target = e.target as HTMLSelectElement
   const selectedOption = target.selectedOptions[0]
-  if (selectedOption.getAttribute("data-filter")) {
+  if (selectedOption.dataset.filter) {
     store.setCurriculumFilter(null)
   } else {
     store.setCurriculumFilter(selectedOption.value)

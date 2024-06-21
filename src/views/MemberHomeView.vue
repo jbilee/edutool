@@ -6,17 +6,3 @@ import TeacherView from "./TeacherView.vue";
 <template>
   <TeacherView />
 </template>
-
-<style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: inherit;
-  scrollbar-gutter: stable both-edges;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
-}
-</style>

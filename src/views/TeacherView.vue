@@ -39,8 +39,11 @@ import EdupalAd from "../components/EdupalAd.vue";
 <style scoped>
 .page-layout {
   display: grid;
-  grid-template-columns: 1fr auto;
   gap: 1.75rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 2fr 1fr;
+  }
 }
 
 .view-title {
