@@ -45,7 +45,7 @@ const onCurriculumFilterChange = (e: Event) => {
         <div>
           커리큘럼: <select @change="onCurriculumFilterChange">
             <option data-filter="all">전체</option>
-            <option v-for="curriculum in curriculums" :value="curriculum">{{ curriculum }}</option>
+            <option v-for="curriculum in curriculums" :value="curriculum.name">{{ curriculum.name }}</option>
           </select>
         </div>
         <button class="large">과제 추가</button>

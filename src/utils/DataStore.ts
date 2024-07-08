@@ -4,7 +4,12 @@ import { sampleAssignments, sampleCurriculums } from "./samples";
 
 export type DataProps = {
   assignments: Assignment[];
-  curriculums: string[];
+  curriculums: Curriculum[];
+};
+
+export type Curriculum = {
+  id: number;
+  name: string;
 };
 
 export type Assignment = {

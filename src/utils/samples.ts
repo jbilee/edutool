@@ -40,7 +40,8 @@ export const sampleAssignments = [
     curriculum: "영어 - 해외여행",
     submissions: 6,
     classSize: 8,
-    details: "해외여행을 가서 겪었던 어려운 일에 대해 말해주세요.",
+    details:
+      "해외여행을 가서 겪었던 어려운 일에 대해 말해주세요. 소지품을 잃어버리거나 일정이 계획한 대로 풀리지 않은 경험이 있었는지 생각해봅니다. 이번 챕터에서 배웠던 단어들을 조합해 200자 이상으로 작성해봅니다.",
     submitters: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지"],
   },
   {
@@ -56,4 +57,9 @@ export const sampleAssignments = [
   },
 ];
 
-export const sampleCurriculums = ["식물 키우기", "수학: 미적분", "영어 - 해외여행", "영어 - 학교생활"];
+export const sampleCurriculums = [
+  { id: 1, name: "식물 키우기" },
+  { id: 2, name: "수학: 미적분" },
+  { id: 3, name: "영어 - 해외여행" },
+  { id: 4, name: "영어 - 학교생활" },
+];
