@@ -35,16 +35,20 @@ const toggleDetails = (id: string) => expandedState[id] = !expandedState[id]
         <td>{{ getDateString(assignment.dueDate) }}</td>
         <td class="assignments__submissions">
           <div><v-icon name="bi-person-check-fill" /> {{ assignment.submissions.toString() }} / {{
-            assignment.classSize.toString() }}</div> 체점하기
+            assignment.classSize.toString() }}</div> 편집 | 체점
         </td>
       </tr>
-      <tr class="assignments__details" v-if="expandedState[assignment.id]">
+      <tr v-if="expandedState[assignment.id]">
         <td></td>
-        <td colspan="5">
-          <strong>과제 내용</strong>
-          {{ assignment.details }}
-          <strong>제출 학생</strong>
-          {{ assignment.submitters.join(", ") }}
+        <td colspan="5" class="assignments__details">
+          <p>
+            <strong>과제 내용:</strong>
+            {{ assignment.details }}
+          </p>
+          <p>
+            <strong>제출 학생:</strong>
+            {{ assignment.submitters.join(", ") }}
+          </p>
         </td>
       </tr>
       <tr @click="toggleDetails(assignment.id.toString())">
@@ -71,11 +75,6 @@ table {
     td {
       padding: 0 0.75rem;
     }
-  }
-
-  .assignments__submissions {
-    display: flex;
-    justify-content: space-between;
   }
 
   tbody {
@@ -123,6 +122,15 @@ table {
         }
       }
     }
+  }
+
+  .assignments__submissions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .assignments__details {
+    padding: 0 1.5rem;
   }
 }
 </style>
