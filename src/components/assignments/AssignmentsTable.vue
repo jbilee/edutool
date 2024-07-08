@@ -24,7 +24,7 @@ const toggleDetails = (id: string) => expandedState[id] = !expandedState[id]
         <td>제출 현황</td>
       </tr>
     </thead>
-    <tbody v-for="assignment in props.assignments" :key="assignment.id.toString()">
+    <tbody v-if="props.assignments.length >= 1" v-for="assignment in props.assignments" :key="assignment.id.toString()">
       <tr>
         <td>
           <div class="label">{{ getDueStatus(assignment.startDate, assignment.dueDate) }}</div>
@@ -50,6 +50,11 @@ const toggleDetails = (id: string) => expandedState[id] = !expandedState[id]
       <tr @click="toggleDetails(assignment.id.toString())">
         <td colspan="6"><v-icon
             :name="expandedState[assignment.id] ? 'bi-chevron-compact-up' : 'bi-chevron-compact-down'" /></td>
+      </tr>
+    </tbody>
+    <tbody v-else class="blank">
+      <tr>
+        <td colspan="6">선택한 필터에 해당하는 과제가 없습니다.</td>
       </tr>
     </tbody>
   </table>
@@ -103,6 +108,20 @@ table {
 
     td {
       height: 2rem;
+    }
+
+    &.blank {
+      outline: none;
+      font-weight: 700;
+
+      tr:last-child {
+        height: 150px;
+        cursor: default;
+
+        &:active {
+          transform: none;
+        }
+      }
     }
   }
 }
