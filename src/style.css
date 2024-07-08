@@ -85,6 +85,7 @@ button:focus-visible {
   border: 1px solid;
   text-align: center;
   width: fit-content;
+  text-wrap: nowrap;
   padding: 0 0.5rem;
   font-size: 0.8rem;
 }

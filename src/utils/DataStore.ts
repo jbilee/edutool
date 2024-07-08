@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { getDueStatus } from "./commons";
 import { sampleAssignments, sampleCurriculums } from "./samples";
 
 export type DataProps = {
@@ -15,10 +16,12 @@ export type Assignment = {
   submissions: number;
   classSize: number;
   details: string;
+  submitters: string[];
 };
 
 type State = DataProps & {
-  filter: null | string;
+  statusFilter: null | string;
+  curriculumFilter: null | string;
 };
 
 const localData = localStorage.getItem("edutool-data");
@@ -27,16 +30,28 @@ const initialState: DataProps = localData
   : { assignments: sampleAssignments, curriculums: sampleCurriculums };
 
 export const useDataStore = defineStore("assignments", {
-  state: (): State => ({ ...initialState, filter: null }),
+  state: (): State => ({ ...initialState, statusFilter: null, curriculumFilter: null }),
   getters: {
     filteredAssignments: (state) => {
-      if (!state.filter) return state.assignments;
-      return state.assignments.filter((assignment) => assignment.curriculum === state.filter);
+      if (!state.statusFilter && !state.curriculumFilter) return state.assignments;
+      return state.assignments
+        .filter((assignment) => {
+          if (state.statusFilter === null) return true;
+          const status = getDueStatus(assignment.startDate, assignment.dueDate);
+          return status === state.statusFilter;
+        })
+        .filter((assignment) => {
+          if (state.curriculumFilter === null) return true;
+          return assignment.curriculum === state.curriculumFilter;
+        });
     },
   },
   actions: {
+    setStatusFilter(filter: string | null) {
+      this.statusFilter = filter;
+    },
     setCurriculumFilter(filter: string | null) {
-      this.filter = filter;
+      this.curriculumFilter = filter;
     },
   },
 });
