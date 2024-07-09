@@ -1,8 +1,13 @@
 <script setup lang="ts">
-import TeacherView from "./TeacherView.vue";
+import { useUser } from "vue-clerk"
+import StudentView from "./StudentView.vue"
+import TeacherView from "./TeacherView.vue"
 
+const { user } = useUser()
+const accountType = user.value?.publicMetadata.accountType
 </script>
 
 <template>
-  <TeacherView />
+  <TeacherView v-if="accountType === 'tutor'" />
+  <StudentView v-if="accountType === 'student'" />
 </template>
