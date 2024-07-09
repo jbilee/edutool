@@ -26,7 +26,7 @@ const props = defineProps<{ chapters: Chapter[], totalChapters: number, currentC
 }
 
 .progress-bar__bar {
-  background: brown;
+  background: var(--primary-polygon-color-base);
   border-radius: 50px;
   display: flex;
   height: 0.5rem;
@@ -34,7 +34,7 @@ const props = defineProps<{ chapters: Chapter[], totalChapters: number, currentC
 }
 
 .progress-bar__bar-complete {
-  background: lightblue;
+  background: var(--primary-polygon-color-light);
   height: 0.5rem;
 }
 </style>

@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { reactive, ref } from "vue"
+import { useRouter } from "vue-router"
 import { useDataStore } from "../utils/DataStore"
 
+const router = useRouter()
 const store = useDataStore()
 const formData = reactive({
   name: "",
@@ -40,7 +42,7 @@ const onRemoveChapter = (number: number) => {
 
 const onSubmit = () => {
   store.addCurriculum(formData)
-  // route change -> back to curriculum page
+  router.push({ name: "curriculum" })
 }
 
 const onDragStart = (i: number) => dragStartIndex.value = i

@@ -58,11 +58,4 @@ const onCurriculumFilterChange = (e: Event) => {
 </template>
 
 <style scoped>
-.control-bar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
 </style>

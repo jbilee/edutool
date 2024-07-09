@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SignedIn, SignedOut, useClerk } from "vue-clerk";
+import { SignedIn, SignedOut, useClerk } from "vue-clerk"
 const { signOut } = useClerk()
 const onSignout = () => signOut()
 </script>
