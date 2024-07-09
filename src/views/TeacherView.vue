@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import WeeklyCalendar from "../components/calendar/WeeklyCalendar.vue";
-import EdupalAd from "../components/EdupalAd.vue";
+import WeeklyCalendar from "../components/calendar/WeeklyCalendar.vue"
+import EdupalAd from "../components/EdupalAd.vue"
 </script>
 
 <template>
@@ -44,12 +44,6 @@ import EdupalAd from "../components/EdupalAd.vue";
   @media (min-width: 768px) {
     grid-template-columns: 2fr 1fr;
   }
-}
-
-.view-title {
-  font-size: 2rem;
-  text-align: left;
-  padding-bottom: 1.75rem;
 }
 
 .cards {

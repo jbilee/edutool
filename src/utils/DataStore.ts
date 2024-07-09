@@ -12,12 +12,15 @@ export type Chapter = {
   topic: string;
 };
 
-export type Curriculum = {
-  id: number;
+type CurriculumFormData = {
   name: string;
   goal: string;
   chapters: Chapter[];
   totalChapters: number;
+};
+
+export type Curriculum = CurriculumFormData & {
+  id: number;
   currentChapter: number;
 };
 
@@ -66,6 +69,11 @@ export const useDataStore = defineStore("assignments", {
     },
     setCurriculumFilter(filter: string | null) {
       this.curriculumFilter = filter;
+    },
+    addCurriculum(newCurriculum: CurriculumFormData) {
+      const id = this.curriculums.length + 1;
+      const currentChapter = 1;
+      this.curriculums.push({ ...newCurriculum, id, currentChapter });
     },
   },
 });

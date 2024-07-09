@@ -79,6 +79,13 @@ button:focus-visible {
   padding-bottom: 0.5rem;
 }
 
+.card__corner-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
 .label {
   border-radius: 50px;
   user-select: none;
