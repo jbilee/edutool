@@ -30,8 +30,8 @@ const onCurriculumFilterChange = (e: Event) => {
 <template>
   <div>
     <h1>과제</h1>
-    <div class="page-layout">
-      <div class="card-title">전체 과제 목록</div>
+    <div class="page__layout">
+      <div class="card__title">전체 과제 목록</div>
       정렬 기능 -- 시작일, 제출일, 과제명
       <div class="control-bar">
         <div>
@@ -50,7 +50,7 @@ const onCurriculumFilterChange = (e: Event) => {
         </div>
         <button class="large">과제 추가</button>
       </div>
-      <div class="card-content">
+      <div class="card__content">
         <AssignmentsTable :assignments="filteredAssignments" />
       </div>
     </div>

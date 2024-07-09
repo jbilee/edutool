@@ -65,14 +65,14 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.card-content {
+.card__content {
   padding: 1.5rem;
   border-radius: 1rem;
   background: rgb(255, 255, 255);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card-title {
+.card__title {
   font-size: 1.2rem;
   font-weight: 700;
   text-align: left;

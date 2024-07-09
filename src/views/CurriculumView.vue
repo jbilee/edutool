@@ -11,7 +11,7 @@ const handleClick = () => alert("clicked on icon")
 <template>
   <div>
     <h1>커리큘럼</h1>
-    <div v-for="curriculum in curriculums" class="card-content">
+    <div v-for="curriculum in curriculums" class="card__content">
       <v-icon name="bi-pencil-square" class="card__icon" @click="handleClick" />
       <h3>{{ curriculum.name }}</h3>
       <p>{{ curriculum.goal }}</p>
@@ -26,7 +26,7 @@ h3 {
   margin: 0;
 }
 
-.card-content {
+.card__content {
   position: relative;
   margin-bottom: 1.5rem;
 }
