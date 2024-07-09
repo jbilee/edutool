@@ -31,6 +31,7 @@
 }
 
 .ad-button {
+  visibility: hidden;
   background: rgba(255, 255, 255, 0.25);
   border-radius: 0.6rem;
   padding: 0.5rem 1rem;
