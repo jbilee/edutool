@@ -58,7 +58,7 @@ const onSubmit = () => {
         <label for="details">내용</label>
         <textarea id="details" @input="onDetailsInput" :value="formData.details"></textarea>
         <label>과제 기간</label>
-        <DatePicker v-model.range.number="range" :columns="2" />
+        <DatePicker v-model.range.number="range" :columns="2" locale="ko-KR" />
         <label for="start-date">시작일</label>
         <div>{{ getDateString(range.start) }}</div>
         <label for="due-date">마감일</label>

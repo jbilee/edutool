@@ -53,7 +53,7 @@ import EdupalAd from "../components/EdupalAd.vue"
   gap: 1.75rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
   }
 }
 </style>

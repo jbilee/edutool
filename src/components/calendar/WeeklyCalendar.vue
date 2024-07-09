@@ -1,67 +1,24 @@
 <script setup lang="ts">
-import EventIcon from "./EventIcon.vue"
+import { Calendar } from "v-calendar"
+import { useDataStore } from "../../utils/DataStore"
 
+const store = useDataStore()
+const assignmentAttributes = store.assignments.map((assignment) => ({
+  order: 0,
+  dates: [assignment.dueDate],
+  dot: true,
+  popover: {
+    label: `${assignment.title} 마감`
+  }
+}))
+const attributes = [...assignmentAttributes]
+const startPage = {
+  year: new Date().getFullYear(),
+  month: new Date().getMonth() + 1,
+  day: new Date().getDate() + 1,
+}
 </script>
 
 <template>
-  <table>
-    <thead>
-      <tr>
-        <td>
-          일
-        </td>
-        <td>
-          월
-        </td>
-        <td>
-          화
-        </td>
-        <td>
-          수
-        </td>
-        <td>
-          목
-        </td>
-        <td>
-          금
-        </td>
-        <td>
-          토
-        </td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td>
-          <EventIcon event-type="quiz" />
-        </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-          <EventIcon event-type="homework" />
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <Calendar view="weekly" :attributes="attributes" :initial-page="startPage" locale="ko-KR" expanded borderless />
 </template>
-
-<style scoped>
-table {
-  border-collapse: collapse;
-
-  tbody tr {
-    height: 80px;
-  }
-
-  tbody td {
-    border-right: 1px dotted rgb(188, 188, 188);
-
-    &:last-child {
-      border: none;
-    }
-  }
-}
-</style>

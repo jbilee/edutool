@@ -15,9 +15,6 @@
     <li>
       <RouterLink to="/main/quizzes">퀴즈</RouterLink>
     </li>
-    <li>
-      <RouterLink to="/main/schedule">일정관리</RouterLink>
-    </li>
   </div>
 </template>
 
