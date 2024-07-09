@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import { clerkPlugin } from "vue-clerk";
 import { createPinia } from "pinia";
 import App from "./App.vue";
+import AssignmentAddView from "./views/AssignmentAddView.vue";
 import AssignmentsView from "./views/AssignmentsView.vue";
 import CurriculumAddView from "./views/CurriculumAddView.vue";
 import CurriculumView from "./views/CurriculumView.vue";
@@ -25,6 +26,7 @@ const routes = [
       { path: "curriculum", name: "curriculum", component: CurriculumView },
       { path: "curriculum/new", name: "addCurriculum", component: CurriculumAddView },
       { path: "assignments", name: "assignments", component: AssignmentsView },
+      { path: "assignments/new", name: "addAssignment", component: AssignmentAddView },
       { path: "quizzes", name: "quizzes", component: QuizzesView },
     ],
   },

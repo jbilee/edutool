@@ -24,15 +24,18 @@ export type Curriculum = CurriculumFormData & {
   currentChapter: number;
 };
 
-export type Assignment = {
-  id: number;
+export type AssignmentFormData = {
   title: string;
   startDate: number;
   dueDate: number;
   curriculum: string;
+  details: string;
+};
+
+export type Assignment = AssignmentFormData & {
+  id: number;
   submissions: number;
   classSize: number;
-  details: string;
   submitters: string[];
 };
 
@@ -74,6 +77,13 @@ export const useDataStore = defineStore("assignments", {
       const id = this.curriculums.length + 1;
       const currentChapter = 1;
       this.curriculums.push({ ...newCurriculum, id, currentChapter });
+    },
+    addAssignment(newAssignment: AssignmentFormData) {
+      const id = this.assignments.length + 1;
+      const submissions = 0;
+      const submitters: string[] = [];
+      const classSize = 5;
+      this.assignments.push({ ...newAssignment, id, submissions, submitters, classSize });
     },
   },
 });

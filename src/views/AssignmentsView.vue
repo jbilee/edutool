@@ -2,7 +2,9 @@
 import { storeToRefs } from "pinia"
 import AssignmentsTable from "../components/assignments/AssignmentsTable.vue"
 import { useDataStore } from "../utils/DataStore.ts"
+import { useRouter } from "vue-router";
 
+const router = useRouter()
 const store = useDataStore()
 const { curriculums, filteredAssignments } = storeToRefs(store)
 
@@ -48,7 +50,7 @@ const onCurriculumFilterChange = (e: Event) => {
             <option v-for="curriculum in curriculums" :value="curriculum.name">{{ curriculum.name }}</option>
           </select>
         </div>
-        <button class="large">과제 추가</button>
+        <button class="large" @click="router.push({ name: 'addAssignment' })">과제 추가</button>
       </div>
       <div class="card__content">
         <AssignmentsTable :assignments="filteredAssignments" />
@@ -57,5 +59,4 @@ const onCurriculumFilterChange = (e: Event) => {
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
