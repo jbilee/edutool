@@ -7,9 +7,18 @@ export type DataProps = {
   curriculums: Curriculum[];
 };
 
+export type Chapter = {
+  number: number;
+  topic: string;
+};
+
 export type Curriculum = {
   id: number;
   name: string;
+  goal: string;
+  chapters: Chapter[];
+  totalChapters: number;
+  currentChapter: number;
 };
 
 export type Assignment = {

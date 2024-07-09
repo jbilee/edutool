@@ -58,8 +58,54 @@ export const sampleAssignments = [
 ];
 
 export const sampleCurriculums = [
-  { id: 1, name: "식물 키우기" },
-  { id: 2, name: "수학: 미적분" },
-  { id: 3, name: "영어 - 해외여행" },
-  { id: 4, name: "영어 - 학교생활" },
+  {
+    id: 1,
+    name: "식물 키우기",
+    goal: "식물을 직접 키워보면서 식물의 생태에 대해 공부합니다.",
+    chapters: [
+      { number: 1, topic: "상추" },
+      { number: 2, topic: "양파" },
+      { number: 3, topic: "배추" },
+    ],
+    totalChapters: 3,
+    currentChapter: 2,
+  },
+  {
+    id: 2,
+    name: "수학: 미적분",
+    goal: "미적분 중급 과정을 배웁니다.",
+    chapters: [
+      { number: 1, topic: "중급 미적분 (상)" },
+      { number: 2, topic: "중급 미적분 (하)" },
+    ],
+    totalChapters: 2,
+    currentChapter: 1,
+  },
+  {
+    id: 3,
+    name: "영어 - 해외여행",
+    goal: "해외여행을 주제로 프리토킹과 작문을 통해 영어를 배웁니다.",
+    chapters: [
+      { number: 1, topic: "가고 싶은 여행지" },
+      { number: 2, topic: "여행 준비 과정" },
+      { number: 3, topic: "어려운 경험" },
+      { number: 4, topic: "새로운 경험" },
+      { number: 5, topic: "여행지 소개" },
+    ],
+    totalChapters: 5,
+    currentChapter: 3,
+  },
+  {
+    id: 4,
+    name: "영어 - 학교생활",
+    goal: "학교생활을 주제로 프리토킹과 작문을 통해 영어를 배웁니다.",
+    chapters: [
+      { number: 1, topic: "학교와 규칙" },
+      { number: 2, topic: "학우와 소통" },
+      { number: 3, topic: "학교 시설" },
+      { number: 4, topic: "교내 행사" },
+    ],
+    totalChapters: 4,
+    currentChapter: 1,
+  },
 ];
