@@ -5,9 +5,9 @@ const props = defineProps<{ chapters: Chapter[], totalChapters: number, currentC
 
 <template>
   <div class="progress-bar__container">
-    <div v-for="chapter in props.chapters" :key="chapter.number">
+    <div v-for="chapter in props.chapters" :key="chapter.number" :title="`${chapter.number}챕터: ${chapter.topic}`">
       <div :class="['progress-bar__bar', chapter.number !== 1 ? 'progress-bar__bar-complete' : '']"></div>
-      <div>[{{ chapter.number }}챕터] <strong>{{ chapter.topic }}</strong></div>
+      <strong>{{ chapter.topic }}</strong>
     </div>
   </div>
 </template>

@@ -7,7 +7,7 @@ const props = defineProps<{ assignments: Assignment[] }>()
 
 <template>
   <li v-for="assignment in props.assignments">
-    <RouterLink :to="`/assignments/${assignment.id}`">{{ assignment.title }}</RouterLink>
+    <RouterLink :to="`/main/assignments/${assignment.id}`">{{ assignment.title }}</RouterLink>
     <span>{{ assignment.submissions }} / {{ assignment.classSize }} 제출</span>
   </li>
 </template>

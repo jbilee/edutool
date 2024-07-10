@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { storeToRefs } from "pinia"
 import AssignmentsOverview from "../components/assignments/AssignmentsOverview.vue"
 import EdupalAd from "../components/EdupalAd.vue"
+import ProgressBar from "../components/curriculums/ProgressBar.vue"
 import WeeklyCalendar from "../components/calendar/WeeklyCalendar.vue"
 import { useDataStore } from "../utils/DataStore"
 
 const store = useDataStore()
+const { curriculums } = storeToRefs(store)
 </script>
 
 <template>
@@ -20,9 +23,13 @@ const store = useDataStore()
           </div>
         </div>
         <div class="card">
-          <div class="card__title">학생 문의</div>
+          <div class="card__title">학습 진도</div>
           <div class="card__content">
-
+            <div v-for="curriculum in curriculums">
+              <h3>{{ curriculum.name }}</h3>
+              <ProgressBar :chapters="curriculum.chapters" :total-chapters="curriculum.totalChapters"
+                :current-chapter="curriculum.currentChapter" />
+            </div>
           </div>
         </div>
       </div>
@@ -44,7 +51,7 @@ const store = useDataStore()
   gap: 1.75rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
   }
 }
 
@@ -55,7 +62,7 @@ const store = useDataStore()
   gap: 1.75rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.75fr;
   }
 }
 </style>
