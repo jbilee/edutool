@@ -4,6 +4,7 @@ import { clerkPlugin } from "vue-clerk";
 import { createPinia } from "pinia";
 import App from "./App.vue";
 import AssignmentAddView from "./views/AssignmentAddView.vue";
+import AssignmentDetailsView from "./views/AssignmentDetailsView.vue";
 import AssignmentsView from "./views/AssignmentsView.vue";
 import CurriculumAddView from "./views/CurriculumAddView.vue";
 import CurriculumView from "./views/CurriculumView.vue";
@@ -27,6 +28,7 @@ const routes = [
       { path: "curriculum/new", name: "addCurriculum", component: CurriculumAddView },
       { path: "assignments", name: "assignments", component: AssignmentsView },
       { path: "assignments/new", name: "addAssignment", component: AssignmentAddView },
+      { path: "assignments/:id", name: "assignmentDetails", component: AssignmentDetailsView },
       { path: "quizzes", name: "quizzes", component: QuizzesView },
     ],
   },
