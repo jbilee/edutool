@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { useRouter } from "vue-router"
 import { storeToRefs } from "pinia"
 import AssignmentsTable from "../components/assignments/AssignmentsTable.vue"
 import { useDataStore } from "../utils/DataStore.ts"
-import { useRouter } from "vue-router";
 
 const router = useRouter()
 const store = useDataStore()

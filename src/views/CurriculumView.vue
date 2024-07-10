@@ -19,7 +19,7 @@ const handleClick = () => alert("clicked on icon")
       <v-icon name="bi-pencil-square" scale="1.4" class="card__corner-button" @click="handleClick" />
       <h3>{{ curriculum.name }}</h3>
       <p>{{ curriculum.goal }}</p>
-      <h3>진도</h3>
+      <h3>커리큘럼 진도</h3>
       <ProgressBar :chapters="curriculum.chapters" :total-chapters="curriculum.totalChapters"
         :current-chapter="curriculum.currentChapter" />
     </div>
