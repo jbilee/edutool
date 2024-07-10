@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { Calendar } from "v-calendar"
-import { useDataStore } from "../../utils/DataStore"
+import { getWeekOfMonth } from "date-fns";
+import type { Assignment } from "../../utils/DataStore"
 
-const store = useDataStore()
-const assignmentAttributes = store.assignments.map((assignment) => ({
+const props = defineProps<{ assignments: Assignment[] }>()
+const assignmentAttributes = props.assignments.map((assignment) => ({
   order: 0,
   dates: [assignment.dueDate],
   dot: true,
@@ -15,7 +16,7 @@ const attributes = [...assignmentAttributes]
 const startPage = {
   year: new Date().getFullYear(),
   month: new Date().getMonth() + 1,
-  day: new Date().getDate() + 1,
+  week: getWeekOfMonth(new Date()),
 }
 </script>
 

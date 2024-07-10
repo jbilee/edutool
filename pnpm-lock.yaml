@@ -8,6 +8,9 @@ dependencies:
   '@popperjs/core':
     specifier: ^2.11.8
     version: 2.11.8
+  date-fns:
+    specifier: ^3.6.0
+    version: 3.6.0
   oh-vue-icons:
     specifier: 1.0.0-rc3
     version: 1.0.0-rc3(vue@3.4.27)
@@ -609,6 +612,10 @@ packages:
     engines: {node: '>=0.11'}
     dependencies:
       '@babel/runtime': 7.24.7
+    dev: false
+
+  /date-fns@3.6.0:
+    resolution: {integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==}
     dev: false
 
   /de-indent@1.0.2:
