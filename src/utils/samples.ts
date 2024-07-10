@@ -8,6 +8,7 @@ export const sampleAssignments = [
     submissions: 3,
     classSize: 10,
     details: "양파랜드 디오라마를 만듭니다.",
+    isArchived: false,
     submitters: ["김철수", "박순희", "최영희"],
   },
   {
@@ -19,6 +20,7 @@ export const sampleAssignments = [
     submissions: 9,
     classSize: 10,
     details: "한달 동안 양파가 자라는 과정을 그림일기로 작성합니다.",
+    isArchived: false,
     submitters: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "김이사", "차대리", "이과장"],
   },
   {
@@ -30,6 +32,7 @@ export const sampleAssignments = [
     submissions: 5,
     classSize: 5,
     details: "해커수학 미적분 II 문제집 챕터 4 섹션 2부터 5까지 읽고 연습문제를 풀어요.",
+    isArchived: false,
     submitters: ["김철수", "박순희", "최영희", "홍길동", "고양이"],
   },
   {
@@ -42,6 +45,7 @@ export const sampleAssignments = [
     classSize: 8,
     details:
       "해외여행을 가서 겪었던 어려운 일에 대해 말해주세요. 소지품을 잃어버리거나 일정이 계획한 대로 풀리지 않은 경험이 있었는지 생각해봅니다. 이번 챕터에서 배웠던 단어들을 조합해 200자 이상으로 작성해봅니다.",
+    isArchived: false,
     submitters: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지"],
   },
   {
@@ -53,6 +57,7 @@ export const sampleAssignments = [
     submissions: 4,
     classSize: 8,
     details: "학교생활을 할 때 지켜야 할 중요한 수칙들이 무엇이 있을까요?",
+    isArchived: false,
     submitters: ["박순희", "최영희", "홍길동", "고양이"],
   },
 ];
@@ -69,6 +74,8 @@ export const sampleCurriculums = [
     ],
     totalChapters: 3,
     currentChapter: 2,
+    classSize: 10,
+    students: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "김이사", "차대리", "이과장", "주차장"],
   },
   {
     id: 2,
@@ -80,6 +87,8 @@ export const sampleCurriculums = [
     ],
     totalChapters: 2,
     currentChapter: 1,
+    classSize: 5,
+    students: ["김철수", "박순희", "최영희", "홍길동", "고양이"],
   },
   {
     id: 3,
@@ -94,6 +103,8 @@ export const sampleCurriculums = [
     ],
     totalChapters: 5,
     currentChapter: 3,
+    classSize: 8,
+    students: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "주차장", "김이사"],
   },
   {
     id: 4,
@@ -107,5 +118,7 @@ export const sampleCurriculums = [
     ],
     totalChapters: 4,
     currentChapter: 1,
+    classSize: 8,
+    students: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "주차장", "김이사"],
   },
 ];

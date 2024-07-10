@@ -2,19 +2,24 @@
 import { useRouter } from "vue-router"
 import { storeToRefs } from "pinia"
 import AssignmentsTable from "../components/assignments/AssignmentsTable.vue"
-import { useDataStore } from "../utils/DataStore.ts"
+import { useAssignmentStore } from "../stores/AssignmentStore.ts"
+import { useCurriculumStore } from "../stores/CurriculumStore.ts"
 
 const router = useRouter()
-const store = useDataStore()
-const { curriculums, filteredAssignments } = storeToRefs(store)
+const assignmentStore = useAssignmentStore()
+const curriculumStore = useCurriculumStore()
+const { filteredAssignments } = storeToRefs(assignmentStore)
+const { curriculums } = storeToRefs(curriculumStore)
+console.log(filteredAssignments.value)
+console.log(curriculums)
 
 const onStatusFilterChange = (e: Event) => {
   const target = e.target as HTMLSelectElement
   const selectedOption = target.selectedOptions[0]
   if (selectedOption.dataset.filter) {
-    store.setStatusFilter(null)
+    assignmentStore.setStatusFilter(null)
   } else {
-    store.setStatusFilter(selectedOption.value)
+    assignmentStore.setStatusFilter(selectedOption.value)
   }
 }
 
@@ -22,9 +27,9 @@ const onCurriculumFilterChange = (e: Event) => {
   const target = e.target as HTMLSelectElement
   const selectedOption = target.selectedOptions[0]
   if (selectedOption.dataset.filter) {
-    store.setCurriculumFilter(null)
+    assignmentStore.setCurriculumFilter(null)
   } else {
-    store.setCurriculumFilter(selectedOption.value)
+    assignmentStore.setCurriculumFilter(selectedOption.value)
   }
 }
 </script>
