@@ -1,6 +1,31 @@
 <script setup lang="ts">
+import { onMounted, onUnmounted } from "vue"
+import NavBar from "../components/NavBar.vue"
+
+const onScroll = () => {
+  console.log("Testing scroll listener")
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", onScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", onScroll)
+})
 </script>
 
 <template>
-  <div>메인화면</div>
+  <NavBar />
+  <div class="main">메인화면</div>
 </template>
+
+<style scoped>
+.main {
+  position: relative;
+  top: 73px;
+  height: calc(100vh - 73px);
+  display: grid;
+  place-content: center;
+}
+</style>
