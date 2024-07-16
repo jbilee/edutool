@@ -1,18 +1,30 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router"
+import { RouterLink, RouterView } from "vue-router"
+import { storeToRefs } from "pinia"
 import MemberNavBar from "./MemberNavBar.vue"
 import Sidebar from "./Sidebar.vue"
+import { useAccountStore } from "../stores/AccountStore"
+
+const store = useAccountStore()
+const { isLoggedIn } = storeToRefs(store)
 </script>
 
 <template>
-  <MemberNavBar />
-  <div class="main">
-    <div class="member-container">
-      <Sidebar />
-      <div class="page-container">
-        <RouterView />
+  <div v-if="isLoggedIn">
+    <MemberNavBar />
+    <div class="main">
+      <div class="member-container">
+        <Sidebar />
+        <div class="page-container">
+          <RouterView />
+        </div>
       </div>
     </div>
+  </div>
+  <div v-else class="main-guest">로그인한 유저만 접근할 수 있는 페이지입니다.
+    <p>
+      <RouterLink to="/signin">로그인 페이지로 이동 →</RouterLink>
+    </p>
   </div>
 </template>
 
@@ -23,6 +35,13 @@ import Sidebar from "./Sidebar.vue"
   height: calc(100vh - 73px);
   display: grid;
   place-content: center;
+}
+
+.main-guest {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
 }
 
 .member-container {

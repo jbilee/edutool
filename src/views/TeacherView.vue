@@ -4,10 +4,13 @@ import AssignmentsOverview from "../components/assignments/AssignmentsOverview.v
 import EdupalAd from "../components/EdupalAd.vue"
 import ProgressBar from "../components/curriculums/ProgressBar.vue"
 import WeeklyCalendar from "../components/calendar/WeeklyCalendar.vue"
-import { useDataStore } from "../utils/DataStore"
+import { useAssignmentStore } from "../stores/AssignmentStore"
+import { useCurriculumStore } from "../stores/CurriculumStore"
 
-const store = useDataStore()
-const { curriculums } = storeToRefs(store)
+const assignmentsStore = useAssignmentStore()
+const curriculumStore = useCurriculumStore()
+const { assignments } = storeToRefs(assignmentsStore)
+const { curriculums } = storeToRefs(curriculumStore)
 </script>
 
 <template>
@@ -19,7 +22,7 @@ const { curriculums } = storeToRefs(store)
         <div class="card">
           <div class="card__title">주간 일정</div>
           <div class="card__content">
-            <WeeklyCalendar :assignments="store.assignments" />
+            <WeeklyCalendar :assignments="assignments" />
           </div>
         </div>
         <div class="card">
@@ -38,7 +41,7 @@ const { curriculums } = storeToRefs(store)
       <div class="card">
         <div class="card__title">과제 제출 현황</div>
         <div class="card__content">
-          <AssignmentsOverview :assignments="store.assignments" />
+          <AssignmentsOverview :assignments="assignments" />
         </div>
       </div>
     </div>

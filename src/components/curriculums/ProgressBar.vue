@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Chapter } from "../../utils/DataStore.ts"
-const props = defineProps<{ chapters: Chapter[], totalChapters: number, currentChapter: number }>()
+const props = defineProps<{ chapters: Chapter[], totalChapters: Number, currentChapter: Number }>()
 </script>
 
 <template>

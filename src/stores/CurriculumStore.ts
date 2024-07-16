@@ -29,7 +29,7 @@ type State = CurriculumStoreProps;
 const localData = localStorage.getItem("edutool-data");
 const initialState: CurriculumStoreProps = localData ? JSON.parse(localData) : { curriculums: sampleCurriculums };
 
-export const useCurriculumStore = defineStore("assignments", {
+export const useCurriculumStore = defineStore("curriculums", {
   state: (): State => ({ ...initialState }),
   actions: {
     addCurriculum(newCurriculum: CurriculumFormData) {

@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { ref } from "vue"
+import { storeToRefs } from "pinia"
 import StudentView from "./StudentView.vue"
 import TeacherView from "./TeacherView.vue"
+import { useAccountStore } from "../stores/AccountStore"
 
-const accountType = ref('tutor')
+const store = useAccountStore()
+const { accountType } = storeToRefs(store)
 </script>
 
 <template>
