@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia"
+import { useCurriculumStore } from "../stores/CurriculumStore"
 import ProgressBar from "../components/curriculums/ProgressBar.vue"
-import { useDataStore } from "../utils/DataStore"
 
-const store = useDataStore()
+const store = useCurriculumStore()
 const { curriculums } = storeToRefs(store)
 const handleClick = () => alert("clicked on icon")
 </script>

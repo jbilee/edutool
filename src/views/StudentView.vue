@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
+import { useAssignmentStore } from "../stores/AssignmentStore"
+import { useCurriculumStore } from "../stores/CurriculumStore"
 import ProgressBar from "../components/curriculums/ProgressBar.vue"
 import WeeklyCalendar from "../components/calendar/WeeklyCalendar.vue"
-import { useDataStore } from "../utils/DataStore"
 
-const store = useDataStore()
-const { curriculums } = storeToRefs(store)
+const curriculumStore = useCurriculumStore()
+const assignmentsStore = useAssignmentStore()
+const { curriculums } = storeToRefs(curriculumStore)
+console.log(curriculums.value)
 </script>
 
 <template>
@@ -34,7 +37,7 @@ const { curriculums } = storeToRefs(store)
     <div class="card">
       <div class="card__title">주간 일정</div>
       <div class="card__content">
-        <WeeklyCalendar :assignments="store.assignments" />
+        <WeeklyCalendar :assignments="assignmentsStore.assignments" />
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Chapter } from "../../utils/DataStore.ts"
+import type { Chapter } from "../../stores/CurriculumStore"
 const props = defineProps<{ chapters: Chapter[], totalChapters: Number, currentChapter: Number }>()
 </script>
 

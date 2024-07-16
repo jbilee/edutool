@@ -4,13 +4,15 @@ import { useRouter } from "vue-router"
 import { storeToRefs } from "pinia"
 import { DatePicker } from "v-calendar"
 import NewAssignmentTips from "../components/assignments/NewAssignmentTips.vue"
-import { useDataStore } from "../utils/DataStore"
 import { getDateString } from "../utils/commons"
+import { useAssignmentStore } from "../stores/AssignmentStore"
+import { useCurriculumStore } from "../stores/CurriculumStore"
 import "v-calendar/style.css"
 
 const router = useRouter()
-const store = useDataStore()
-const { curriculums } = storeToRefs(store)
+const curriculumStore = useCurriculumStore()
+const assignmentsStore = useAssignmentStore()
+const { curriculums } = storeToRefs(curriculumStore)
 const range = ref({
   start: Date.now(),
   end: Date.now()
@@ -37,7 +39,7 @@ const onSubmit = () => {
   const startDate = range.value.start
   const dueDate = range.value.end
   console.log(formData)
-  store.addAssignment({ ...formData, startDate, dueDate })
+  assignmentsStore.addAssignment({ ...formData, startDate, dueDate })
   router.push({ name: "assignments" })
 }
 </script>

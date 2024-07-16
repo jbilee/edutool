@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router"
 import { storeToRefs } from "pinia"
-import { useDataStore } from "../utils/DataStore"
+import { useAssignmentStore } from "../stores/AssignmentStore";
 
-const store = useDataStore()
+const store = useAssignmentStore()
 const { assignments } = storeToRefs(store)
 const route = useRoute()
 const assignmentId = Number(route.params.id)

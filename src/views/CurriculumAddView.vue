@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { reactive, ref } from "vue"
 import { useRouter } from "vue-router"
+import { useCurriculumStore } from "../stores/CurriculumStore"
 import NewCurriculumTips from "../components/curriculums/NewCurriculumTips.vue"
-import { useDataStore } from "../utils/DataStore"
 
 const router = useRouter()
-const store = useDataStore()
+const store = useCurriculumStore()
 const formData = reactive({
   name: "",
   goal: "",

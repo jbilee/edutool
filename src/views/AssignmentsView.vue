@@ -1,17 +1,15 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router"
 import { storeToRefs } from "pinia"
+import { useAssignmentStore } from "../stores/AssignmentStore"
+import { useCurriculumStore } from "../stores/CurriculumStore"
 import AssignmentsTable from "../components/assignments/AssignmentsTable.vue"
-import { useAssignmentStore } from "../stores/AssignmentStore.ts"
-import { useCurriculumStore } from "../stores/CurriculumStore.ts"
 
 const router = useRouter()
 const assignmentStore = useAssignmentStore()
 const curriculumStore = useCurriculumStore()
 const { filteredAssignments } = storeToRefs(assignmentStore)
 const { curriculums } = storeToRefs(curriculumStore)
-console.log(filteredAssignments.value)
-console.log(curriculums)
 
 const onStatusFilterChange = (e: Event) => {
   const target = e.target as HTMLSelectElement

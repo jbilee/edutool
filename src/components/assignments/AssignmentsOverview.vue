@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router"
-import type { Assignment } from "../../utils/DataStore.ts"
+import type { Assignment } from "../../stores/AssignmentStore.ts"
 
 const props = defineProps<{ assignments: Assignment[] }>()
 </script>
