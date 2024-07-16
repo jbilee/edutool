@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { useUser } from "vue-clerk"
+import { ref } from "vue"
 import StudentView from "./StudentView.vue"
 import TeacherView from "./TeacherView.vue"
 
-const { user } = useUser()
-const accountType = user.value?.publicMetadata.accountType
+const accountType = ref('tutor')
 </script>
 
 <template>

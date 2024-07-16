@@ -1,22 +1,19 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router"
-import { SignedIn } from "vue-clerk"
 import MemberNavBar from "./MemberNavBar.vue"
 import Sidebar from "./Sidebar.vue"
 </script>
 
 <template>
-  <SignedIn>
-    <MemberNavBar />
-    <div class="main">
-      <div class="member-container">
-        <Sidebar />
-        <div class="page-container">
-          <RouterView />
-        </div>
+  <MemberNavBar />
+  <div class="main">
+    <div class="member-container">
+      <Sidebar />
+      <div class="page-container">
+        <RouterView />
       </div>
     </div>
-  </SignedIn>
+  </div>
 </template>
 
 <style scoped>

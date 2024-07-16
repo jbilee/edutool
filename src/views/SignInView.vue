@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import { SignIn } from "vue-clerk";
 </script>
 
 <template>
-  <div class="container">
-    <SignIn />
-  </div>
+  <div></div>
 </template>
 
 <style scoped>
-.container {
+/* .container {
   position: relative;
   top: -80px;
-}
+} */
 </style>

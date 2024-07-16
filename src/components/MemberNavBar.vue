@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { SignedIn, SignedOut, useClerk } from "vue-clerk"
-const { signOut } = useClerk()
-const onSignout = () => signOut()
 </script>
 
 <template>
@@ -9,12 +6,12 @@ const onSignout = () => signOut()
     <div class="logo">
       <RouterLink to="/">Edutool</RouterLink>
     </div>
-    <SignedIn>
-      <button @click="onSignout">로그아웃</button>
-    </SignedIn>
-    <SignedOut>
+    <div class="signed-in">
+      <button @click="() => console.log('logging out')">로그아웃</button>
+    </div>
+    <div class="signed-out">
       <RouterLink to="/signin">로그인</RouterLink>
-    </SignedOut> 설정
+    </div>
   </div>
 </template>
 

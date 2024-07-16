@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
-import { clerkPlugin } from "vue-clerk";
 import { createPinia } from "pinia";
 import App from "./App.vue";
 import AssignmentAddView from "./views/AssignmentAddView.vue";
@@ -43,9 +42,6 @@ const pinia = createPinia();
 
 const app = createApp(App);
 app.use(router);
-app.use(clerkPlugin, {
-  publishableKey: import.meta.env.VITE_CLERK_PUBLISHABLE_KEY,
-});
 app.use(pinia);
 app.component("v-icon", OhVueIcon);
 app.mount("#app");

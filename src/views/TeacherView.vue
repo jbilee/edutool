@@ -11,7 +11,7 @@ const { curriculums } = storeToRefs(store)
 </script>
 
 <template>
-  <h1>튜터 메인페이지</h1>
+  <h1>튜터님, 어서오세요!</h1>
   <div class="page__layout">
     <div class="page__main">
       <EdupalAd />
