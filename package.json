@@ -15,7 +15,6 @@
     "pinia": "^2.1.7",
     "v-calendar": "^3.1.2",
     "vue": "^3.4.31",
-    "vue-clerk": "^0.4.8",
     "vue-router": "^4.4.0"
   },
   "devDependencies": {
