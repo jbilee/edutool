@@ -3,7 +3,7 @@
 
 :root {
   --primary-link-color-base: #646cff;
-  --primary-link-color-light: #535bf2;
+  --primary-link-color-light: #747bff;
   --primary-polygon-color-base: #8c1bd2;
   --primary-polygon-color-light: #e7d0f5;
   font-family: "Noto Sans KR", sans-serif;
@@ -62,7 +62,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--primary-link-color-base);
 }
 button:focus,
 button:focus-visible {
@@ -132,7 +132,7 @@ button.large {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: var(--primary-link-color-light);
   }
   button {
     background-color: #f9f9f9;

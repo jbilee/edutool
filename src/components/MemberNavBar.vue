@@ -1,4 +1,14 @@
 <script setup lang="ts">
+import { useRouter } from "vue-router"
+import { useAccountStore } from "../stores/AccountStore"
+
+const router = useRouter()
+const store = useAccountStore()
+const handleClick = () => {
+  store.setLoggedInStatus(false)
+  store.setAccountType(null)
+  router.push("/")
+}
 </script>
 
 <template>
@@ -6,11 +16,9 @@
     <div class="logo">
       <RouterLink to="/">Edutool</RouterLink>
     </div>
-    <div class="signed-in">
-      <button @click="() => console.log('logging out')">로그아웃</button>
-    </div>
-    <div class="signed-out">
-      <RouterLink to="/signin">로그인</RouterLink>
+    <div class="signout-button" @click="handleClick">
+      <v-icon name="io-log-out-sharp" />
+      로그아웃
     </div>
   </div>
 </template>
@@ -34,6 +42,16 @@
 
   a {
     color: black;
+  }
+}
+
+.signout-button {
+  color: var(--primary-link-color-base);
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--primary-link-color-light);
   }
 }
 </style>
