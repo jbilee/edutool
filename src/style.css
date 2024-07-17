@@ -4,6 +4,8 @@
 :root {
   --primary-link-color-base: #646cff;
   --primary-link-color-light: #747bff;
+  --secondary-link-color-base: #38aff4;
+  --secondary-link-color-light: #5bbdf6;
   --primary-polygon-color-base: #8c1bd2;
   --primary-polygon-color-light: #e7d0f5;
   font-family: "Noto Sans KR", sans-serif;

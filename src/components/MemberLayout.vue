@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router"
+import { RouterLink, RouterView, useRouter } from "vue-router"
 import { storeToRefs } from "pinia"
+import { useAccountStore } from "../stores/AccountStore"
 import MemberNavBar from "./MemberNavBar.vue"
 import Sidebar from "./Sidebar.vue"
-import { useAccountStore } from "../stores/AccountStore"
 
+const router = useRouter()
 const store = useAccountStore()
 const { isLoggedIn } = storeToRefs(store)
+if (!isLoggedIn.value) router.push("/signin")
 </script>
 
 <template>

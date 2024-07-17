@@ -1,20 +1,23 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia"
+import { useAccountStore } from "../stores/AccountStore"
+import { useAssignmentStore } from "../stores/AssignmentStore"
+import { useCurriculumStore } from "../stores/CurriculumStore"
 import AssignmentsOverview from "../components/assignments/AssignmentsOverview.vue"
 import EdupalAd from "../components/EdupalAd.vue"
 import ProgressBar from "../components/curriculums/ProgressBar.vue"
 import WeeklyCalendar from "../components/calendar/WeeklyCalendar.vue"
-import { useAssignmentStore } from "../stores/AssignmentStore"
-import { useCurriculumStore } from "../stores/CurriculumStore"
 
 const assignmentsStore = useAssignmentStore()
 const curriculumStore = useCurriculumStore()
+const accountStore = useAccountStore()
+const { displayName } = storeToRefs(accountStore)
 const { assignments } = storeToRefs(assignmentsStore)
 const { curriculums } = storeToRefs(curriculumStore)
 </script>
 
 <template>
-  <h1>튜터님, 어서오세요!</h1>
+  <h1>{{ displayName }}님, 어서오세요!</h1>
   <div class="page__layout">
     <div class="page__main">
       <EdupalAd />

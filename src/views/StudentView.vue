@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
+import { storeToRefs } from "pinia"
+import { useAccountStore } from "../stores/AccountStore"
 import { useAssignmentStore } from "../stores/AssignmentStore"
 import { useCurriculumStore } from "../stores/CurriculumStore"
 import ProgressBar from "../components/curriculums/ProgressBar.vue"
@@ -7,12 +8,14 @@ import WeeklyCalendar from "../components/calendar/WeeklyCalendar.vue"
 
 const curriculumStore = useCurriculumStore()
 const assignmentsStore = useAssignmentStore()
+const accountStore = useAccountStore()
 const { curriculums } = storeToRefs(curriculumStore)
+const { displayName } = storeToRefs(accountStore)
 console.log(curriculums.value)
 </script>
 
 <template>
-  <h1>학생 메인페이지</h1>
+  <h1>{{ displayName }}님, 어서오세요!</h1>
   <div class="page__layout">
     <div class="cards">
       <div class="card">
