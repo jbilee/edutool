@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { reactive } from "vue"
 import { getDateString, getDueStatus } from "../../utils/commons.ts"
-import type { Assignment } from "../../utils/DataStore.ts"
+import type { Assignment } from "../../stores/AssignmentStore.ts"
 const props = defineProps<{
   assignments: Assignment[]
 }>()

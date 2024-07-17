@@ -6,7 +6,10 @@
     <div class="logo">
       <RouterLink to="/">Edutool</RouterLink>
     </div>
-    <RouterLink to="/main">대시보드로</RouterLink>
+    <div class="dashboard-button">
+      <v-icon name="md-spacedashboard" />
+      <RouterLink to="/main">대시보드로</RouterLink>
+    </div>
   </div>
 </template>
 
@@ -30,5 +33,12 @@
   a {
     color: black;
   }
+}
+
+.dashboard-button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--primary-link-color-base);
 }
 </style>

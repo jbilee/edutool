@@ -6,6 +6,7 @@ import {
   BiPencilSquare,
   GiHamburgerMenu,
   HiSolidExclamationCircle,
+  MdSpacedashboard,
 } from "oh-vue-icons/icons";
 export { OhVueIcon } from "oh-vue-icons";
 
@@ -15,5 +16,6 @@ addIcons(
   BiChevronCompactUp,
   BiPencilSquare,
   GiHamburgerMenu,
-  HiSolidExclamationCircle
+  HiSolidExclamationCircle,
+  MdSpacedashboard
 );
