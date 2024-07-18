@@ -21,7 +21,7 @@ export const sampleAssignments = [
     classSize: 10,
     details: "한달 동안 양파가 자라는 과정을 그림일기로 작성합니다.",
     isArchived: false,
-    submitters: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "김이사", "차대리", "이과장"],
+    submitters: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "김제자", "차대리", "이과장"],
   },
   {
     id: 3,
@@ -75,7 +75,7 @@ export const sampleCurriculums = [
     totalChapters: 3,
     currentChapter: 2,
     classSize: 10,
-    students: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "김이사", "차대리", "이과장", "주차장"],
+    students: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "김제자", "차대리", "이과장", "주차장"],
   },
   {
     id: 2,
@@ -104,7 +104,7 @@ export const sampleCurriculums = [
     totalChapters: 5,
     currentChapter: 3,
     classSize: 8,
-    students: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "주차장", "김이사"],
+    students: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "주차장", "김제자"],
   },
   {
     id: 4,
@@ -119,6 +119,6 @@ export const sampleCurriculums = [
     totalChapters: 4,
     currentChapter: 1,
     classSize: 8,
-    students: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "주차장", "김이사"],
+    students: ["김철수", "박순희", "최영희", "홍길동", "고양이", "강아지", "주차장", "김제자"],
   },
 ];

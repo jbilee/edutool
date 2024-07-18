@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import { sampleCurriculums } from "../utils/samples";
+import { EnrolledClass } from "./AccountStore";
 
 export type CurriculumStoreProps = {
   curriculums: Curriculum[];
@@ -31,6 +32,16 @@ const initialState: CurriculumStoreProps = localData ? JSON.parse(localData) : {
 
 export const useCurriculumStore = defineStore("curriculums", {
   state: (): State => ({ ...initialState }),
+  getters: {
+    getCurriculumsById: (state) => (classes: EnrolledClass[]) => {
+      if (classes.length === 0) return null;
+      return classes.reduce<Curriculum[]>((arr, cur) => {
+        const curriculum = state.curriculums.find((curriculum) => curriculum.id === cur.id);
+        if (curriculum) arr.push(curriculum);
+        return arr;
+      }, []);
+    },
+  },
   actions: {
     addCurriculum(newCurriculum: CurriculumFormData) {
       const initValues = {

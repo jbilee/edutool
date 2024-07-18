@@ -49,6 +49,10 @@ export const useAssignmentStore = defineStore("assignments", {
           return assignment.curriculum === state.curriculumFilter;
         });
     },
+    getAssignmentsByCurriculum: (state) => (curriculum: string) => {
+      const assignments = state.assignments.filter((assignment) => assignment.curriculum === curriculum);
+      return { curriculum, assignments };
+    },
   },
   actions: {
     setStatusFilter(filter: string | null) {
