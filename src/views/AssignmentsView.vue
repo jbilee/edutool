@@ -49,7 +49,7 @@ const onCurriculumFilterChange = (e: Event) => {
             <option data-filter="all">커리큘럼 전체</option>
             <option v-for="curriculum in curriculums" :value="curriculum.name">{{ curriculum.name }}</option>
           </select>
-          <button class="large" @click="router.push({ name: 'addAssignment' })">과제 추가</button>
+          <div class="btn" @click="router.push({ name: 'addAssignment' })">+ 과제 추가</div>
         </div>
       </div>
       <div class="card__content">

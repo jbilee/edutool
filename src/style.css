@@ -3,7 +3,7 @@
 
 :root {
   --primary-link-color-base: #646cff;
-  --primary-link-color-light: #747bff;
+  --primary-link-color-light: #7980ff;
   --secondary-link-color-base: #38aff4;
   --secondary-link-color-light: #5bbdf6;
   --primary-polygon-color-base: #8c1bd2;
@@ -12,10 +12,7 @@
   font-family: "Noto Sans KR", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  /* color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424; */
+  color: var(--primary-text-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -52,33 +49,30 @@ li {
   list-style: none;
 }
 
-button {
+.btn {
   border-radius: 8px;
-  border: 1px solid transparent;
-  font-size: 0.7em;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  width: max-content;
+  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--primary-link-color-base);
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: 0.25s;
 }
-button:hover {
-  border-color: var(--primary-link-color-base);
+.btn:hover {
+  background: var(--primary-link-color-light);
 }
-button:focus,
-button:focus-visible {
+.btn:focus,
+.btn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-button.large {
-  font-size: 1rem;
-  padding: 0.25rem 0.75rem;
 }
 
 .card__content {
   padding: 1.5rem;
   border-radius: 1rem;
-  background: rgb(255, 255, 255);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -125,17 +119,4 @@ button.large {
 
 #app {
   margin: 0 auto;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--primary-text-color);
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: var(--primary-link-color-light);
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
