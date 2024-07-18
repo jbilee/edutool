@@ -8,6 +8,7 @@
   --secondary-link-color-light: #5bbdf6;
   --primary-polygon-color-base: #8c1bd2;
   --primary-polygon-color-light: #e7d0f5;
+  --primary-text-color: #213547;
   font-family: "Noto Sans KR", sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -37,8 +38,6 @@ a:hover {
 
 body {
   margin: 0;
-  /* display: flex;
-  place-items: center; */
   min-height: 100vh;
 }
 
@@ -130,7 +129,7 @@ button.large {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: var(--primary-text-color);
     background-color: #ffffff;
   }
   a:hover {

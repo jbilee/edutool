@@ -21,12 +21,24 @@
 <style scoped>
 .sidebar {
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1.5rem;
   border-right: 1px solid rgb(225, 225, 225);
   flex: 1 0 1;
 
+  & a {
+    color: var(--primary-text-color);
+
+    &.router-link-exact-active {
+      color: var(--primary-link-color-base);
+    }
+  }
+
+  & li {
+    margin-bottom: 0.75rem;
+  }
+
   @media (min-width: 768px) {
-    max-width: 210px;
+    max-width: 160px;
   }
 
   @media (min-width: 1200px) {

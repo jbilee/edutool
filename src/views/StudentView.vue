@@ -20,11 +20,11 @@ console.log(curriculums.value)
     <div class="cards">
       <div class="card">
         <div class="card__title">학습 진도</div>
-        <div class="card__content">
+        <div class="card__content progress-container">
           <div v-for="curriculum in curriculums">
             <h3>{{ curriculum.name }}</h3>
             <ProgressBar :chapters="curriculum.chapters" :total-chapters="curriculum.totalChapters"
-              :current-chapter="curriculum.currentChapter" />
+              text-size="size-small" :current-chapter="curriculum.currentChapter" />
           </div>
         </div>
       </div>
@@ -60,5 +60,16 @@ console.log(curriculums.value)
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h3 {
+  margin: 0;
+  margin-bottom: 1rem;
 }
 </style>

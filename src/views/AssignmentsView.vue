@@ -36,24 +36,21 @@ const onCurriculumFilterChange = (e: Event) => {
   <div>
     <h1>과제</h1>
     <div class="page__layout">
-      <div class="card__title">전체 과제 목록</div>
-      정렬 기능 -- 시작일, 제출일, 과제명
       <div class="control-bar">
-        <div>
-          진행: <select @change="onStatusFilterChange">
-            <option data-filter="all">전체</option>
+        <div class="card__title">전체 과제 목록</div>
+        <div class="control-bar__controls">
+          <select @change="onStatusFilterChange">
+            <option data-filter="all">진행 전체</option>
             <option value="시작 전">시작 전</option>
             <option value="진행 중">진행 중</option>
             <option value="마감">마감</option>
           </select>
-        </div>
-        <div>
-          커리큘럼: <select @change="onCurriculumFilterChange">
-            <option data-filter="all">전체</option>
+          <select @change="onCurriculumFilterChange">
+            <option data-filter="all">커리큘럼 전체</option>
             <option v-for="curriculum in curriculums" :value="curriculum.name">{{ curriculum.name }}</option>
           </select>
+          <button class="large" @click="router.push({ name: 'addAssignment' })">과제 추가</button>
         </div>
-        <button class="large" @click="router.push({ name: 'addAssignment' })">과제 추가</button>
       </div>
       <div class="card__content">
         <AssignmentsTable :assignments="filteredAssignments" />

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import type { Chapter } from "../../stores/CurriculumStore"
-const props = defineProps<{ chapters: Chapter[], totalChapters: Number, currentChapter: Number }>()
+const props = defineProps<{ chapters: Chapter[], totalChapters: Number, currentChapter: Number, textSize: String }>()
 </script>
 
 <template>
   <div class="progress-bar__container">
     <div v-for="chapter in props.chapters" :key="chapter.number" :title="`${chapter.number}챕터: ${chapter.topic}`">
-      <div :class="['progress-bar__bar', chapter.number !== 1 ? 'progress-bar__bar-complete' : '']"></div>
-      <strong>{{ chapter.topic }}</strong>
+      <div :class="['progress-bar__bar', chapter.number !== 1 ? 'progress-bar__bar--complete' : '']"></div>
+      <strong :class="textSize">{{ chapter.topic }}</strong>
     </div>
   </div>
 </template>
@@ -22,6 +22,9 @@ const props = defineProps<{ chapters: Chapter[], totalChapters: Number, currentC
     flex: 1 0 1;
     text-align: center;
     position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
@@ -30,11 +33,18 @@ const props = defineProps<{ chapters: Chapter[], totalChapters: Number, currentC
   border-radius: 50px;
   display: flex;
   height: 0.5rem;
-
 }
 
-.progress-bar__bar-complete {
+.progress-bar__bar--complete {
   background: var(--primary-polygon-color-light);
   height: 0.5rem;
+}
+
+.size-regular {
+  font-size: 1rem;
+}
+
+.size-small {
+  font-size: 0.75rem;
 }
 </style>
