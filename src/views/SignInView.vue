@@ -24,8 +24,10 @@ const onSignin = (type: string) => {
 
 <template>
   <div class="container">
-    <h1>Welcome!</h1>
-    <p>회원가입 기능을 지원하지 않는 데모 사이트입니다.<br />아래 데모용 계정을 사용해주세요.</p>
+    <div>
+      <h1>Welcome!</h1>
+      <p>회원가입 기능을 지원하지 않는 데모 사이트입니다.<br />아래 데모용 계정을 사용해주세요.</p>
+    </div>
     <div class="signin-buttons">
       <div class="signin-button signin-button__tutor" @click="onSignin('tutor')"><strong>튜터 계정</strong>으로 로그인</div>
       <div class="signin-button signin-button__student" @click="onSignin('student')"><strong>학생 계정</strong>으로 로그인</div>
@@ -37,21 +39,38 @@ const onSignin = (type: string) => {
 .container {
   display: grid;
   height: 100vh;
-  place-content: center;
+  padding: 1.5rem 1rem;
+  place-content: flex-end center;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+    place-content: center;
+  }
 }
 
 .signin-buttons {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 60%;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
 
 .signin-button {
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 50px;
-  font-size: 1.25rem;
   cursor: pointer;
   transition: 0.25s;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+  }
 }
 
 .signin-button__tutor {
