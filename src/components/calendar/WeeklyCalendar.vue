@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Calendar } from "v-calendar"
-import { getWeekOfMonth } from "date-fns";
+import { getWeekOfMonth } from "date-fns"
 import type { Assignment } from "../../stores/AssignmentStore"
 
 const props = defineProps<{ assignments: Assignment[] }>()

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router"
 import { useAccountStore } from "../stores/AccountStore"
+import MobileMenuBtn from "../components/MobileMenuBtn.vue"
 
 const router = useRouter()
 const store = useAccountStore()
@@ -20,6 +21,7 @@ const handleClick = () => {
       <v-icon name="io-log-out-sharp" />
       로그아웃
     </div>
+    <MobileMenuBtn />
   </div>
 </template>
 
@@ -32,7 +34,6 @@ const handleClick = () => {
   z-index: 50;
   display: flex;
   padding: 1.5rem;
-  background: rgb(255, 255, 255);
   border-bottom: 1px solid rgb(225, 225, 225);
 }
 
@@ -46,12 +47,17 @@ const handleClick = () => {
 }
 
 .signout-button {
+  display: none;
   color: var(--primary-link-color-base);
   font-weight: 500;
   cursor: pointer;
 
   &:hover {
     color: var(--primary-link-color-light);
+  }
+
+  @media (min-width: 768px) {
+    display: block;
   }
 }
 </style>

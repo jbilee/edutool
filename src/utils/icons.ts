@@ -9,6 +9,11 @@ import {
   MdSpacedashboard,
   IoLogOutSharp,
   BiConeStriped,
+  CoHamburgerMenu,
+  MdHomeRound,
+  HiSolidBookOpen,
+  MdSchoolRound,
+  HiSolidPencil,
 } from "oh-vue-icons/icons";
 export { OhVueIcon } from "oh-vue-icons";
 
@@ -21,5 +26,10 @@ addIcons(
   HiSolidExclamationCircle,
   MdSpacedashboard,
   IoLogOutSharp,
-  BiConeStriped
+  BiConeStriped,
+  CoHamburgerMenu,
+  MdHomeRound,
+  HiSolidBookOpen,
+  MdSchoolRound,
+  HiSolidPencil
 );

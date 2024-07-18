@@ -24,6 +24,7 @@
   padding: 1.5rem;
   border-right: 1px solid rgb(225, 225, 225);
   flex: 1 0 1;
+  display: none;
 
   & a {
     color: var(--primary-text-color);
@@ -38,11 +39,12 @@
   }
 
   @media (min-width: 768px) {
-    max-width: 160px;
+    display: block;
+    max-width: 140px;
   }
 
-  @media (min-width: 1200px) {
-    max-width: 260px;
+  @media (min-width: 1600px) {
+    max-width: 240px;
   }
 }
 </style>

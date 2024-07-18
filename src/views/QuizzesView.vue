@@ -4,7 +4,7 @@
 <template>
   <div class="quiz-page">
     <div><v-icon name="bi-cone-striped" scale="3" /></div>
-    컨텐츠를 준비 중입니다.
+    준비 중인 컨텐츠입니다.
   </div>
 </template>
 
