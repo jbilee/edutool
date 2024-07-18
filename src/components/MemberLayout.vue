@@ -61,8 +61,12 @@ if (!isLoggedIn.value) router.push("/signin")
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 2rem;
+  padding: 0.85rem;
   scrollbar-gutter: stable;
   overflow: auto;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
 }
 </style>

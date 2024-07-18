@@ -54,7 +54,7 @@ const allAssignments = assignmentsByCurriculum ? assignmentsByCurriculum.reduce<
   display: grid;
   gap: 1.75rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
     grid-template-columns: 3fr 1fr;
   }
 }

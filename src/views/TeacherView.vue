@@ -54,10 +54,11 @@ const { curriculums } = storeToRefs(curriculumStore)
 <style scoped>
 .page__layout {
   display: grid;
-  gap: 1.75rem;
+  gap: 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1400px) {
     grid-template-columns: 2.5fr 1fr;
+    gap: 1.75rem;
   }
 }
 
@@ -67,7 +68,7 @@ const { curriculums } = storeToRefs(curriculumStore)
   padding: 1.5rem 0;
   gap: 1.75rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1400px) {
     grid-template-columns: 1fr 1.75fr;
   }
 }

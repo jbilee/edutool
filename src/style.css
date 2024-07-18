@@ -39,7 +39,7 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1.1;
   margin: 0;
   margin-bottom: 1.75rem;
@@ -52,9 +52,9 @@ li {
 .btn {
   border-radius: 8px;
   border: none;
-  padding: 0.5rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   width: max-content;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
   font-family: inherit;
   background-color: var(--primary-link-color-base);
@@ -119,4 +119,15 @@ li {
 
 #app {
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
 }
