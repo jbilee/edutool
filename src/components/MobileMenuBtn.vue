@@ -8,7 +8,10 @@ const closeMenu = () => isOpen.value = false
 </script>
 
 <template>
-  <div class="mobile-menu" @click="openMenu">
+  <div class="mobile-menu-btn" v-if="isOpen" @click="closeMenu">
+    <v-icon name="io-close-outline" scale="1.2" />
+  </div>
+  <div class="mobile-menu-btn" v-else @click="openMenu">
     <v-icon name="co-hamburger-menu" scale="1.2" />
   </div>
   <div :class="['mobile-bg', isOpen ? 'mobile-menu__open' : 'mobile-menu__closed']" @click="closeMenu" />
@@ -16,7 +19,9 @@ const closeMenu = () => isOpen.value = false
 </template>
 
 <style scoped>
-.mobile-menu {
+.mobile-menu-btn {
+  position: relative;
+  z-index: 60;
   cursor: pointer;
 
   @media (min-width: 768px) {

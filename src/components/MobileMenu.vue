@@ -38,6 +38,7 @@ const onMenuClick = (path: string) => {
   background: white;
 
   li {
+    cursor: pointer;
     padding: 0.75rem 2rem;
 
     &:first-child {
@@ -51,6 +52,10 @@ const onMenuClick = (path: string) => {
     &.router-link-exact-active {
       color: var(--primary-link-color-base);
     }
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 }
 </style>

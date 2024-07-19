@@ -29,9 +29,6 @@ a {
   color: var(--primary-link-color-base);
   text-decoration: inherit;
 }
-a:hover {
-  color: var(--primary-link-color-light);
-}
 
 body {
   margin: 0;
