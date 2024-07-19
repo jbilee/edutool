@@ -15,7 +15,7 @@ const onMenuClick = (path: string) => {
       <v-icon name="md-home-round" />{{ " " }}메인페이지
     </li>
     <li @click="onMenuClick('/main/curriculum')">
-      <v-icon name="md-school-round" />{{ " " }}내 커리큘럼
+      <v-icon name="md-school-round" />{{ " " }}커리큘럼
     </li>
     <li @click="onMenuClick('/main/assignments')">
       <v-icon name="hi-solid-book-open" />{{ " " }}과제

@@ -9,6 +9,8 @@
   --primary-polygon-color-base: #8c1bd2;
   --primary-polygon-color-light: #e7d0f5;
   --primary-text-color: #213547;
+  --light-line-color: #c2cbd1;
+  --disabled-color: #b6b9ba;
   font-family: "Noto Sans KR", sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -68,7 +70,7 @@ li {
 }
 
 .card__content {
-  padding: 1.5rem;
+  padding: 0.9rem;
   border-radius: 1rem;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
@@ -126,5 +128,9 @@ li {
   .btn {
     font-size: 1rem;
     padding: 0.5rem 0.75rem;
+  }
+
+  .card__content {
+    padding: 1.5rem;
   }
 }

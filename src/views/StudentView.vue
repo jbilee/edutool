@@ -65,6 +65,14 @@ const allAssignments = assignmentsByCurriculum ? assignmentsByCurriculum.reduce<
   gap: 1.75rem;
 }
 
+.card {
+  max-width: calc(100vw - 27px);
+}
+
+.card__content {
+  overflow-x: hidden;
+}
+
 .progress-container {
   display: flex;
   flex-direction: column;

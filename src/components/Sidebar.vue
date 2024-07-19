@@ -7,7 +7,7 @@
       <RouterLink to="/main">메인페이지</RouterLink>
     </li>
     <li>
-      <RouterLink to="/main/curriculum">내 커리큘럼</RouterLink>
+      <RouterLink to="/main/curriculum">커리큘럼</RouterLink>
     </li>
     <li>
       <RouterLink to="/main/assignments">과제</RouterLink>
