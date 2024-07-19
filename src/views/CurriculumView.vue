@@ -22,7 +22,7 @@ const handleClick = () => alert("clicked on icon")
       <ProgressBar :chapters="curriculum.chapters" :total-chapters="curriculum.totalChapters" text-size="size-regular"
         :current-chapter="curriculum.currentChapter" />
     </div>
-    <div class="card__title">완료한 커리큘럼</div>
+    <div class="card__title hidden">완료한 커리큘럼</div>
   </div>
 </template>
 
@@ -35,5 +35,9 @@ h3 {
 .card__content {
   position: relative;
   margin-bottom: 1.5rem;
+}
+
+.hidden {
+  display: none;
 }
 </style>
