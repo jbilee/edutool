@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useRouter } from "vue-router"
+// import { useRouter } from "vue-router"
 import { storeToRefs } from "pinia"
 import { useAssignmentStore } from "../../stores/AssignmentStore"
 import { useCurriculumStore } from "../../stores/CurriculumStore"
 import AssignmentsTable from "../../components/assignments/AssignmentsTable.vue"
 
-const router = useRouter()
+// const router = useRouter()
 const assignmentStore = useAssignmentStore()
 const curriculumStore = useCurriculumStore()
 const { filteredAssignments } = storeToRefs(assignmentStore)

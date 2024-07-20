@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia"
 import { useAccountStore } from "../stores/AccountStore"
-import AssignmentStudent from "./student/AssignmentStudent.vue"
-import AssignmentTutor from "./tutor/AssignmentTutor.vue"
+import AssignmentStudentView from "./student/AssignmentStudentView.vue"
+import AssignmentTutorView from "./tutor/AssignmentTutorView.vue"
 
 const accountStore = useAccountStore()
 const { accountType } = storeToRefs(accountStore)
@@ -10,9 +10,9 @@ const { accountType } = storeToRefs(accountStore)
 
 <template>
   <div v-if="accountType === 'tutor'">
-    <AssignmentTutor />
+    <AssignmentTutorView />
   </div>
   <div v-if="accountType === 'student'">
-    <AssignmentStudent />
+    <AssignmentStudentView />
   </div>
 </template>
