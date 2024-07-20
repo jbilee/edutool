@@ -18,6 +18,7 @@ const onSignin = (type: string) => {
   }
   store.setAccountType(type)
   store.setLoggedInStatus(true)
+  store.saveToStorage()
   router.push("/main")
 }
 </script>

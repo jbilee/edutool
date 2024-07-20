@@ -5,9 +5,10 @@ import MobileMenuBtn from "../components/MobileMenuBtn.vue"
 
 const router = useRouter()
 const store = useAccountStore()
-const handleClick = () => {
+const handleSignout = () => {
   store.setLoggedInStatus(false)
   store.setAccountType(null)
+  store.saveToStorage()
   router.push("/")
 }
 </script>
@@ -17,7 +18,7 @@ const handleClick = () => {
     <div class="logo">
       <RouterLink to="/">Edutool</RouterLink>
     </div>
-    <div class="signout-button" @click="handleClick">
+    <div class="signout-button" @click="handleSignout">
       <v-icon name="io-log-out-sharp" />
       로그아웃
     </div>

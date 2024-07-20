@@ -15,7 +15,10 @@ type AccountStoreProps = {
 
 type State = AccountStoreProps;
 
-const initialState: AccountStoreProps = { accountType, isLoggedIn, displayName, enrolledClasses };
+const localData = localStorage.getItem("edutool-acc");
+const initialState: AccountStoreProps = localData
+  ? JSON.parse(localData)
+  : { accountType, isLoggedIn, displayName, enrolledClasses };
 
 export const useAccountStore = defineStore("account", {
   state: (): State => ({ ...initialState }),
@@ -28,6 +31,15 @@ export const useAccountStore = defineStore("account", {
     },
     setDisplayName(name: string) {
       this.displayName = name;
+    },
+    saveToStorage() {
+      const saveData = {
+        accountType: this.accountType,
+        isLoggedIn: this.isLoggedIn,
+        displayName: this.displayName,
+        enrolledClasses: this.enrolledClasses,
+      };
+      localStorage.setItem("edutool-acc", JSON.stringify(saveData));
     },
   },
 });
