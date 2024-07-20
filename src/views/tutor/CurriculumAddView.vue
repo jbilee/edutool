@@ -3,7 +3,7 @@ import { reactive, ref } from "vue"
 import { useRouter } from "vue-router"
 import { useAccountStore } from "../../stores/AccountStore"
 import { useCurriculumStore } from "../../stores/CurriculumStore"
-import NewCurriculumTips from "../components/curriculums/NewCurriculumTips.vue"
+import NewCurriculumTips from "../../components/curriculums/NewCurriculumTips.vue"
 
 const router = useRouter()
 const accountStore = useAccountStore()

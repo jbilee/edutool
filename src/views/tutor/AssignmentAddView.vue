@@ -7,7 +7,7 @@ import { getDateString } from "../../utils/commons"
 import { useAccountStore } from "../../stores/AccountStore"
 import { useAssignmentStore } from "../../stores/AssignmentStore"
 import { useCurriculumStore } from "../../stores/CurriculumStore"
-import NewAssignmentTips from "../components/assignments/NewAssignmentTips.vue"
+import NewAssignmentTips from "../../components/assignments/NewAssignmentTips.vue"
 import "v-calendar/style.css"
 
 const router = useRouter()
