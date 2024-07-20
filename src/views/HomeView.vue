@@ -24,7 +24,7 @@ onUnmounted(() => {
 .main {
   position: relative;
   top: 73px;
-  height: calc(100vh - 73px);
+  height: calc(100dvh - 73px);
   display: grid;
   place-content: center;
 }

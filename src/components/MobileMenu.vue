@@ -35,7 +35,7 @@ const onMenuClick = (path: string) => {
   z-index: 10;
   border-left: 1px solid rgb(225, 225, 225);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  background: white;
+  background-color: rgb(255, 255, 255);
 
   li {
     cursor: pointer;

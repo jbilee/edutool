@@ -38,12 +38,12 @@ const onSignin = (type: string) => {
 <style scoped>
 .container {
   display: grid;
-  height: 100vh;
+  height: 100dvh;
   padding: 1.5rem 1rem;
   place-content: flex-end center;
 
   @media (min-width: 768px) {
-    height: 100vh;
+    height: 100dvh;
     place-content: center;
   }
 }
@@ -62,7 +62,7 @@ const onSignin = (type: string) => {
 }
 
 .signin-button {
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 0.5rem 1.5rem;
   border-radius: 50px;
   cursor: pointer;

@@ -35,7 +35,7 @@ a {
 
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 h1 {
@@ -58,7 +58,7 @@ li {
   font-weight: 500;
   font-family: inherit;
   background-color: var(--primary-link-color-base);
-  color: white;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   transition: 0.25s;
 }

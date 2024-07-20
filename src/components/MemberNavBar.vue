@@ -34,6 +34,7 @@ const handleClick = () => {
   z-index: 50;
   display: flex;
   padding: 1.5rem;
+  background-color: rgb(255, 255, 255);
   border-bottom: 1px solid rgb(225, 225, 225);
 }
 

@@ -34,13 +34,13 @@ if (!isLoggedIn.value) router.push("/signin")
 .main {
   position: relative;
   top: 73px;
-  height: calc(100vh - 73px);
+  height: calc(100dvh - 73px);
   display: grid;
   place-content: center;
 }
 
 .main-guest {
-  height: 100vh;
+  height: 100dvh;
   display: grid;
   place-content: center;
   text-align: center;
