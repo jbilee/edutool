@@ -27,7 +27,7 @@ export const sampleAssignments = [
     id: 3,
     title: "[해커수학 미적분II] 문제집 풀이",
     startDate: 1708157728848,
-    dueDate: 1718157728848,
+    dueDate: 1716757728848,
     curriculum: "수학: 미적분",
     submissions: 5,
     classSize: 5,
