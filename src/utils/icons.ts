@@ -16,6 +16,8 @@ import {
   HiSolidPencil,
   IoTrashBin,
   IoCloseOutline,
+  FaQuoteLeft,
+  FaQuoteRight,
 } from "oh-vue-icons/icons";
 export { OhVueIcon } from "oh-vue-icons";
 
@@ -35,5 +37,7 @@ addIcons(
   MdSchoolRound,
   HiSolidPencil,
   IoTrashBin,
-  IoCloseOutline
+  IoCloseOutline,
+  FaQuoteLeft,
+  FaQuoteRight
 );

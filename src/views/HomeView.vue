@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Card from "../components/Card.vue"
 import MobileImage from "../components/MobileImage.vue"
 import NavBar from "../components/NavBar.vue"
 </script>
@@ -15,8 +16,8 @@ import NavBar from "../components/NavBar.vue"
         <img src="../assets/tutor.svg" />
       </div>
     </div>
-    <div class="section bottom">
-      <div class="bottom__content">
+    <div class="section middle">
+      <div class="middle__content">
         <div>
           <p>
             <strong>FOR TUTORS,</strong><br />
@@ -28,6 +29,15 @@ import NavBar from "../components/NavBar.vue"
           </p>
         </div>
         <MobileImage />
+      </div>
+    </div>
+    <div class="section bottom">
+      <div class="cards-container">
+        <Card imageUrl="avatar.svg"
+          commentary="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, tenetur!" />
+        <Card imageUrl="avatar.svg"
+          commentary="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam nihil quidem id dolores iste rem sint voluptates optio, nemo cum." />
+        <Card imageUrl="avatar.svg" commentary="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
       </div>
     </div>
     <div class="footer">
@@ -82,7 +92,7 @@ h1 {
   place-content: center;
   min-height: 100dvh;
 
-  &.bottom {
+  &.middle {
     background-color: var(--primary-polygon-color-light);
     font-size: 1.25rem;
 
@@ -115,7 +125,7 @@ h1 {
   }
 }
 
-.bottom__content {
+.middle__content {
   display: grid;
   margin: 0 auto;
 
@@ -136,10 +146,35 @@ h1 {
   }
 }
 
+.cards-container {
+  @media screen and (max-width: 1159px) {
+    display: flex;
+    padding: 0 1rem;
+    gap: 1rem;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 24px;
+
+    &>div {
+      width: 280px;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+    }
+  }
+
+  @media screen and (min-width: 1160px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    gap: 2rem;
+  }
+}
+
 .footer {
   height: 140px;
   padding: 5rem 2rem 0;
   text-align: right;
   font-size: 0.85rem;
+  background-color: rgb(237, 239, 240);
 }
 </style>
