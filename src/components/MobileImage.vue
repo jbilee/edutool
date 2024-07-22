@@ -15,19 +15,36 @@
 <style scoped>
 .image-container {
   position: relative;
-  width: 550px;
-  top: -100px;
+  top: -120px;
+  scale: 0.7;
 
   img {
     width: inherit;
+  }
+
+  @media screen and (min-width: 460px) {
+    top: -80px;
+    scale: 0.85;
+  }
+
+  @media screen and (min-width: 1160px) {
+    width: 550px;
+    scale: 1;
   }
 }
 
 .image-device {
   position: absolute;
   width: 260px;
-  height: 500px;
-  left: 150px;
+  left: 35px;
+
+  @media screen and (min-width: 670px) {
+    left: 80px;
+  }
+
+  @media screen and (min-width: 1160px) {
+    left: 150px;
+  }
 }
 
 .image-overlay {
@@ -42,17 +59,25 @@
 
 .overlay__calendar {
   top: 60px;
-  left: 35px;
+  left: -10px;
   width: 260px;
   height: 170px;
   border-radius: 1.3rem;
+
+  @media screen and (min-width: 1160px) {
+    left: 35px;
+  }
 }
 
 .overlay__curriculum {
   top: 290px;
-  right: 10px;
+  right: -20px;
   width: 340px;
   height: 140px;
   border-radius: 1.3rem;
+
+  @media screen and (min-width: 1160px) {
+    right: 10px;
+  }
 }
 </style>
