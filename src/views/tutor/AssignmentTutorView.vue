@@ -39,6 +39,11 @@ const onCurriculumFilterChange = (e: Event) => {
       <div class="control-bar">
         <div class="card__title">전체 과제 목록</div>
         <div class="control-bar__controls">
+          <div class="btn" @click="router.push({ name: 'addAssignment' })">+ 추가</div>
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="card__filters">
           <select @change="onStatusFilterChange">
             <option data-filter="all">진행 전체</option>
             <option value="시작 전">시작 전</option>
@@ -49,14 +54,24 @@ const onCurriculumFilterChange = (e: Event) => {
             <option data-filter="all">커리큘럼 전체</option>
             <option v-for="curriculum in curriculums" :value="curriculum.name">{{ curriculum.name }}</option>
           </select>
-          <div class="btn" @click="router.push({ name: 'addAssignment' })">+ 과제 추가</div>
         </div>
-      </div>
-      <div class="card__content">
         <AssignmentsTable :assignments="filteredAssignments" />
       </div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+div.card__title {
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.card__filters {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+</style>

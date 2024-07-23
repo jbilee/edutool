@@ -12,7 +12,7 @@ const handleClick = () => alert("clicked on icon")
   <h1>커리큘럼</h1>
   <div class="control-bar">
     <div class="card__title">진행 중인 커리큘럼</div>
-    <RouterLink to="/main/curriculum/new" class="btn">+ 커리큘럼 추가</RouterLink>
+    <RouterLink to="/main/curriculum/new" class="btn">+ 추가</RouterLink>
   </div>
   <div v-for="curriculum in curriculums" class="card__content">
     <v-icon name="bi-pencil-square" scale="1.4" class="card__corner-button" @click="handleClick" />
@@ -37,5 +37,11 @@ h3 {
 
 .hidden {
   display: none;
+}
+
+div.card__title {
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
 }
 </style>
